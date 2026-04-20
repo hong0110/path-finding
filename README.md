@@ -1,5 +1,5 @@
 # Pathfinding 
-
+This is a visualization tool designed to demonstrate the inner workings of various pathfinding algorithms as they navigate from point A to point B. It also offers an engaging look at different maze/pattern generation algorithms and how they craft intricate mazes/patterns. 
 
 
 ## Pathfinding Algorithms
