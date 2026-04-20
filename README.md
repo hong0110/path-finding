@@ -24,7 +24,7 @@ Follow these steps to run the project locally.
 
 2. Navigate to directory
   ```sh
-  cd pathfinding-visualizer
+  cd path-finding
   ```
 
 2. Install dependenices
