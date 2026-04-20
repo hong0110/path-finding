@@ -1,0 +1,125 @@
+.help-modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba($color: #000000, $alpha: 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: $secondary;
+
+	.help-modal {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 1rem;
+		border-radius: 1rem;
+		padding: 2rem;
+		background-color: $primary;
+		min-height: 80%;
+		min-width: 50%;
+		word-wrap: break-word;
+		overflow-wrap: break-word;
+		white-space: normal;
+
+		h2 {
+			font-size: 2rem;
+		}
+
+		p {
+			max-width: 70ch;
+			text-align: center;
+			font-size: 1.2rem;
+		}
+
+		.tutorial-gif {
+			width: 100%;
+			height: auto;
+		}
+
+		.page-counter {
+			position: absolute;
+			padding-bottom: 2rem;
+			bottom: 0;
+
+			p {
+				padding: 0.5rem 1rem 0.5rem 1rem;
+			}
+		}
+
+		@media only screen and (max-width: 1400px) {
+			gap: 0.6rem;
+			scale: 0.8;
+
+			h2 {
+				font-size: 1.4rem;
+			}
+			p {
+				font-size: 0.8rem;
+			}
+			a {
+				font-size: 0.8rem;
+			}
+
+			.tutorial-gif {
+				// width: 70%;
+			}
+		}
+
+		#help-modal-close-btn {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			font-size: 2rem;
+			width: 36px;
+			height: 36px;
+			top: 10px;
+			right: 10px;
+			border: none;
+			background-color: transparent;
+			cursor: pointer;
+		}
+
+		.buttons {
+			button {
+				background-color: transparent;
+				border: none;
+				font-weight: bold;
+				background-color: $accent;
+				color: $primary;
+				padding: 0.5rem 1rem 0.5rem 1rem;
+				border-radius: 0.5rem;
+				font-size: 1.2rem;
+				cursor: pointer;
+
+				@media only screen and (max-width: 1400px) {
+					font-size: 0.8rem;
+					padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+				}
+
+				&:hover {
+					background-color: darken($accent, 5%);
+				}
+
+				&:active {
+					background-color: darken($accent, 10%);
+				}
+			}
+
+			width: 100%;
+			margin-top: auto;
+			display: flex;
+			justify-content: space-between;
+
+			.page-buttons {
+				display: flex;
+				gap: 1rem;
+			}
+		}
+	}
+}

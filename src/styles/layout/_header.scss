@@ -1,0 +1,188 @@
+#header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-top: 1rem;
+	gap: 0.2rem;
+	background-color: $tertiary;
+	color: $primary;
+
+	@media only screen and (max-width: 1400px) {
+		gap: 0.2rem;
+		padding-top: 0.8rem;
+	}
+
+	#selections {
+		display: flex;
+		align-items: center;
+		gap: 3rem;
+		height: 100%;
+
+		@media only screen and (max-width: 1400px) {
+			gap: 2rem;
+		}
+
+		.selection-item {
+			background-color: transparent;
+			color: $primary;
+			border: none;
+			font-size: 1rem;
+			font-weight: bold;
+			cursor: pointer;
+
+			@media only screen and (max-width: 1400px) {
+				font-size: 0.8rem;
+			}
+		}
+
+		.down-arrow {
+			color: rgba($color: #fff, $alpha: 0.3);
+			cursor: pointer;
+
+			@media only screen and (max-width: 1400px) {
+				font-size: 0.8rem;
+			}
+		}
+
+		& > div {
+			display: flex;
+			align-items: center;
+			position: relative;
+			gap: 0.5rem;
+			flex-direction: row-reverse;
+			cursor: pointer;
+			height: 100%;
+
+			// if a menu is currently open, keep the underline styling
+			.currently-opened-menu {
+				text-decoration: underline;
+				text-decoration-thickness: 3px;
+				text-underline-offset: 18px;
+
+				text-decoration-color: $accent;
+
+				@media only screen and (max-width: 1400px) {
+					text-underline-offset: 13px;
+					text-decoration-thickness: 2px;
+				}
+			}
+
+			// show underline styling when hovering over a menu item
+			&:hover > .selection-item {
+				text-decoration: underline;
+				text-decoration-thickness: 3px;
+				text-underline-offset: 18px;
+
+				text-decoration-color: $accent;
+
+				@media only screen and (max-width: 1400px) {
+					text-underline-offset: 13px;
+					text-decoration-thickness: 2px;
+				}
+			}
+		}
+
+		#start-btn {
+			font-weight: bold;
+			background-color: $accent;
+			height: 100%;
+			color: $primary;
+			border: none;
+			padding: 1rem 2rem 1rem 2rem;
+			font-size: 1.2rem;
+			cursor: pointer;
+
+			&:hover {
+				opacity: 0.9;
+			}
+
+			@media only screen and (max-width: 1400px) {
+				font-size: 1rem;
+				padding: 0.6rem 1.6rem 0.6rem 1.6rem;
+			}
+		}
+
+		.drop-down-content {
+			display: flex;
+			flex-direction: column;
+			position: absolute;
+			background-color: $tertiary;
+			z-index: 100;
+			top: 4rem;
+			left: 0;
+			width: auto;
+			min-width: 100%;
+
+			@media only screen and (max-width: 1400px) {
+				top: 3rem;
+			}
+
+			& > button {
+				background-color: transparent;
+				color: rgba($color: $primary, $alpha: 0.9);
+				border: none;
+				font-size: 1rem;
+				text-align: start;
+				padding: 1rem;
+				white-space: nowrap;
+				transition: all 0.1s;
+				cursor: pointer;
+
+				&:hover {
+					background-color: $accent;
+				}
+
+				@media only screen and (max-width: 1400px) {
+					padding: 0.8rem;
+					font-size: 0.8rem;
+				}
+			}
+
+			.currently-selected {
+				background-color: $accent;
+			}
+		}
+	}
+
+	h1 {
+		color: $primary;
+		font-size: 1.4rem;
+
+		@media only screen and (max-width: 1400px) {
+			font-size: 1rem;
+		}
+	}
+
+	#help-btn {
+		position: absolute;
+		right: 3rem;
+		justify-self: end;
+		font-weight: bold;
+		cursor: pointer;
+		background-color: transparent;
+		color: rgba($color: $primary, $alpha: 0.9);
+		border: none;
+		font-size: 1rem;
+		text-align: start;
+		white-space: nowrap;
+		cursor: pointer;
+
+		&:hover {
+			text-decoration: underline;
+			text-decoration-thickness: 3px;
+			text-underline-offset: 18px;
+
+			text-decoration-color: $accent;
+
+			@media only screen and (max-width: 1400px) {
+				text-underline-offset: 13px;
+				text-decoration-thickness: 2px;
+			}
+		}
+
+		@media only screen and (max-width: 1400px) {
+			font-size: 0.8rem;
+		}
+	}
+}
